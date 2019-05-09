@@ -4203,22 +4203,33 @@ public final class Settings {
         private static final Validator OMNI_QS_QUICKBAR_COLUMNS_VALIDATOR =
                 ANY_INTEGER_VALIDATOR;
 
+
  
-		/**
+        /**
          * Whether to enable gaming mode or not
          *
          * @hide
          */
         public static final String ENABLE_GAMING_MODE = "enable_gaming_mode";
-		
-		 /**
-	         * Whether to show the battery info on the lockscreen while charging
-	         * @hide
-	         */
-	        public static final String LOCKSCREEN_BATTERY_INFO = "lockscreen_battery_info";
-	
-	        /** @hide */
-	        public static final Validator LOCKSCREEN_BATTERY_INFO_VALIDATOR = BOOLEAN_VALIDATOR;
+        
+        /**
+            * Whether to show the battery info on the lockscreen while charging
+                * @hide
+            */
+            public static final String LOCKSCREEN_BATTERY_INFO = "lockscreen_battery_info";
+    
+            /** @hide */
+        public static final Validator LOCKSCREEN_BATTERY_INFO_VALIDATOR = BOOLEAN_VALIDATOR;
+
+         /**
+         * Swipe to screenshot
+         * @hide
+         */
+        public static final String SWIPE_TO_SCREENSHOT = "swipe_to_screenshot";
+
+        /** @hide */
+        public static final Validator SWIPE_TO_SCREENSHOT_VALIDATOR = BOOLEAN_VALIDATOR;
+
       
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
@@ -4406,7 +4417,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(QS_TILE_HIDE_TITLE);
             PRIVATE_SETTINGS.add(OMNI_QS_QUICKBAR_COLUMNS);
             PRIVATE_SETTINGS.add(LOCKSCREEN_BATTERY_INFO);
-
+            PRIVATE_SETTINGS.add(SWIPE_TO_SCREENSHOT);
         }
 
         /**
@@ -4503,6 +4514,7 @@ public final class Settings {
             VALIDATORS.put(QS_LAYOUT_ROWS, QS_LAYOUT_ROWS_VALIDATOR);
             VALIDATORS.put(QS_LAYOUT_ROWS_LANDSCAPE, QS_LAYOUT_ROWS_LANDSCAPE_VALIDATOR);
             VALIDATORS.put(LOCKSCREEN_BATTERY_INFO, LOCKSCREEN_BATTERY_INFO_VALIDATOR);
+            VALIDATORS.put(SWIPE_TO_SCREENSHOT, SWIPE_TO_SCREENSHOT_VALIDATOR);		
 
         }
 
